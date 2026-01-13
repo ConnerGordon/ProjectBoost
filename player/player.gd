@@ -49,7 +49,7 @@ func crash_sequence():
 	transitioning = true
 	freeze = true
 	explosionaudio.play()
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2.45).timeout
 	
 	print("boom")
 	get_tree().reload_current_scene.call_deferred()
@@ -58,5 +58,5 @@ func complete_level(next_level_file):
 	transitioning = true
 	freeze = true
 	successaudio.play()
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2.31).timeout
 	get_tree().change_scene_to_file.call_deferred(next_level_file)
